@@ -1,0 +1,57 @@
+Hand Gesture Calculator
+
+A Python-based hand gesture calculator utilizing OpenCV and MediaPipe for real-time hand tracking and gesture recognition. This application allows users to perform basic arithmetic calculations using hand gestures detected through a webcam.
+
+Features
+Real-time Hand Gesture Recognition: Detect and interpret gestures to input numbers and mathematical operators.
+Basic Arithmetic Operations: Perform addition, subtraction, multiplication, division, modulus, and power operations.
+Clear and Evaluate: Clear the current expression or evaluate it to display the result.
+Interactive Interface: Displays the detected gesture and the ongoing calculation visually.
+
+Gestures Supported
+Gesture Operation
+Fist - 0
+Index finger - 1
+Index + Middle - 2
+Index + Middle + Ring - 3
+All fingers - 5
+Thumb only - +
+Pinky only - (-)
+Thumb + Index + Pinky - *
+Thumb + Pinky - /
+Index + Middle + Ring - . (decimal)
+Index + Ring - =
+Index + Ring + Pinky - C (clear)
+Thumb + Index + Ring - ( (open parenthesis)
+Thumb + Index + Ring + Pinky - ) (close parenthesis)
+Thumb + Middle + Ring - √ (square root)
+
+Requirements: 
+Python 3.8+
+OpenCV
+MediaPipe
+NumPy
+
+Install Dependencies
+pip install opencv-python mediapipe numpy
+
+How to Run
+Clone the repository:
+git clone https://github.com/your-username/hand-gesture-calculator.git
+cd hand-gesture-calculator
+
+Run the script:
+python main.py ( Use the supported hand gestures in front of your webcam to perform calculations) . Press ESC to exit the application.
+
+Key Components
+Gesture Recognition: Utilizes MediaPipe's Hand Landmark Model to extract hand landmarks and derive finger states and angles.
+Gesture Interpretation: Maps recognized hand gestures to numerical inputs or mathematical operators.
+Expression Evaluation: Constructs mathematical expressions and evaluates them using Python's eval() function.
+Interface Drawing: Displays real-time feedback, including the detected gesture and the current expression.
+
+Files 
+main.py( Main script implementing the hand gesture calculator)
+
+
+Acknowledgments
+ MediaPipe for the hand tracking solution. OpenCV for image processing functionalities. Feel free to contribute to this project by submitting issues or pull requests!
